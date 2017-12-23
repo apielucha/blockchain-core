@@ -1,0 +1,37 @@
+{
+  "name": "boilerplate-nodejs-typescript",
+  "version": "1.0.0",
+  "description": "Basic boilerplate for NodeJS projects using TypeScript.",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "./bin/build",
+    "dev": "./bin/dev",
+    "start": "./bin/start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apielucha/boilerplate-nodejs-typescript.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "nodejs",
+    "typescript",
+    "nodemon"
+  ],
+  "author": "Alexandre Pielucha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apielucha/boilerplate-nodejs-typescript/issues"
+  },
+  "homepage": "https://github.com/apielucha/boilerplate-nodejs-typescript#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.2",
+    "nodemon": "^1.14.3",
+    "ts-node": "^4.0.2",
+    "typescript": "^2.6.2"
+  }
+}
