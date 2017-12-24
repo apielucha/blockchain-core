@@ -1,4 +1,5 @@
-import * as dotenv from 'dotenv'
+import App from './App'
 
-dotenv.config()
-console.log('Hello world! You are running in a ' + process.env.NODE_ENV + ' environment.')
+const app: App = new App()
+app.init()
+app.run()
