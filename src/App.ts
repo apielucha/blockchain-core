@@ -8,7 +8,7 @@ class App {
 
   run(): void {
     const blockchain: Blockchain = new Blockchain()
-    blockchain.firstBlock()
+    blockchain.populate()
   }
 }
 

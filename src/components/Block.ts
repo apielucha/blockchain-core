@@ -1,3 +1,5 @@
+import * as Crypto from 'crypto'
+
 // BLOCK: defines a block of the blockchain
 
 class Block {
@@ -12,13 +14,26 @@ class Block {
     this.timestamp = builder.Timestamp
     this.previousHash = builder.PreviousHash
     this.data = builder.Data
+
+    this.hash = this.hashBlock()
   }
+
+  get Id(): number { return this.id }
+  get Hash(): string { return this.hash }
 
   display(): void {
     console.log(
       `\nID: ${this.id}\nTimestamp: ${this.timestamp}` +
-      `\nPrevious hash: ${this.previousHash}\nData: ${this.data}`
+      `\nPrevious hash: ${this.previousHash}\nData: ${this.data}` +
+      `\nHash: ${this.hash}\n`
     )
+  }
+
+  hashBlock(): string {
+    return Crypto
+      .createHash('sha256')
+      .update(this.id + this.timestamp + this.previousHash + this.data)
+      .digest('base64');
   }
 }
 
